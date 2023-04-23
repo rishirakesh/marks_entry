@@ -1,4 +1,0 @@
-Flask
-openpyxl
-werkzeug
-gunicorn

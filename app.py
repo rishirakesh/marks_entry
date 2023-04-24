@@ -8,7 +8,6 @@ app.secret_key = 'mysecretkey'
 @app.route("/",methods=["POST","GET"])
 
 def home():
-    reg_no = ""
     empty_row1 = None
     empty_row2 = None
     empty_row3 = None
@@ -153,6 +152,7 @@ def home():
          else:
              data = [reg_no,Name,IA_1,IA_one,Assi,IA_2,IA_two,Assign,IA_3,IA_three]
              sheet.append(data)
+            
          if empty_row1 is not None and empty_row2 is not None:
              sheet.cell(row=empty_row1, column=2).value = IA_1
              sheet.cell(row=empty_row2, column=3).value = IA_one

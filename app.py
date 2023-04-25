@@ -23,9 +23,8 @@ def home():
         if 'file' in request.files:
             file = request.files['file']
             filename = secure_filename(file.filename)
-            file_path = os.path.join('D:/',filename)
-            file.save(file_path)
-            session['filename'] = file_path
+            file.save(filename)
+            session['filename'] = filename
 
         if request.form.get('Reg_no'):
             Reg_no = request.form["Reg_no"]

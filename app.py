@@ -9,6 +9,7 @@ app.secret_key = 'mysecretkey'
 
 @app.route("/", methods=["POST", "GET"])
 def home():
+    reg_no =""
     empty_row1 = None
     empty_row2 = None
     empty_row3 = None

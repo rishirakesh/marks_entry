@@ -27,7 +27,6 @@ def home():
                 file_path = os.path.join(file_path, filename)
                 file.save(file_path)
                 session['filename'] = file_path
-                return redirect(url_for('success'))
 
         if request.form.get('Reg_no'):
             Reg_no = request.form["Reg_no"]
@@ -176,10 +175,6 @@ def home():
         return render_template("home.html", choose_file=False,reg_no=reg_no,Names=Names, IA_1s=IA_1s, IA_one=IA_one, A1=A1,IA_2s=IA_2s, IA_two=IA_two, A2=A2, IA_3s=IA_3s, IA_three=IA_three)
     return render_template("home.html", choose_file=True)
 
-@app.route('/success')
-def success():
-    filename= session.get('filename')
-    return render_template('home.html',filename=filename)
 if __name__=="__main__":
     app.run(debug=True)
 

@@ -26,7 +26,7 @@ def home():
                         return redirect(request.url)
                     if file:
                         filename = secure_filename(file.filename)
-                        file_path = request.form.get('file_path')
+                        file_path = "D:"
                         if file_path:
                             file_path = os.path.join(file_path, filename)
                             os.chmod(file_path, 0o666)
